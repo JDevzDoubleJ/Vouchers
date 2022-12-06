@@ -1,1 +1,741 @@
-h
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+  <title> See You Mahal! </title>
+
+  </head>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Unicon Icons -->
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+  
+
+  .wrapper {
+
+  position: relative;
+
+  max-width: 295px;
+
+  width: 100%;
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  padding: 30px 25px;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .wrapper .password-box {
+
+  position: relative;
+
+  height: 50px;
+
+  }
+
+  .password-box input {
+
+  height: 100%;
+
+  width: 100%;
+
+  border-radius: 100px;
+
+  padding: 0 5px 0 5px;
+
+  border: 1px solid #aaa;
+
+  background-color: transparent;
+
+  }
+
+  .password-box .copy-icon {
+
+  position: absolute;
+
+  right: 15px;
+
+  top: 50%;
+
+  color: #707070;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  }
+
+  .copy-icon:hover {
+
+  color: #826afb;
+
+  }
+
+  .wrapper .range-box {
+
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 20px;
+
+  }
+
+  .range-box input {
+
+  width: 100%;
+
+  height: 5px;
+
+  accent-color: #826afb;
+
+  cursor: pointer;
+
+  }
+
+  .range-box .slider-number {
+
+  min-width: 30px;
+
+  text-align: right;
+
+  font-size: 17px;
+
+  color: #707070;
+
+  }
+
+  
+
+  .wrapper .generate-button {
+
+  width: 100%;
+
+  color: #fff;
+
+  padding: 12px 0;
+
+  margin-top: 20px;
+
+  background: #927dfc;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  }
+
+  .generate-button:hover {
+
+  background-color: #826afb;
+
+  }
+
+  
+
+p {
+
+  text-align: center;
+
+  font-size: 45px;
+
+  margin-top: 0px;
+
+}
+
+.offense {
+
+color: #3b4d3c;
+
+}
+
+            .tooltip {
+
+            position: relative;
+
+            display: inline-block;
+
+            }
+
+            
+
+            .tooltip .tooltiptext {
+
+            visibility: hidden;
+
+            width: 140px;
+
+            background-color: #555;
+
+            color: #fff;
+
+            text-align: center;
+
+            border-radius: 6px;
+
+            padding: 5px;
+
+            position: absolute;
+
+            z-index: 1;
+
+            bottom: 150%;
+
+            left: 50%;
+
+            margin-left: -75px;
+
+            opacity: 0;
+
+            transition: opacity 0.3s;
+
+            }
+
+            
+
+            .tooltip .tooltiptext::after {
+
+            content: "";
+
+            position: absolute;
+
+            top: 100%;
+
+            left: 50%;
+
+            margin-left: -5px;
+
+            border-width: 5px;
+
+            border-style: solid;
+
+            border-color: #555 transparent transparent transparent;
+
+            }
+
+            
+
+            .tooltip:hover .tooltiptext {
+
+            visibility: visible;
+
+            opacity: 1;
+
+            }
+
+            
+
+            .toolipsy {
+
+            position: relative;
+
+            display: inline-block;
+
+            }
+
+            
+
+            .toolipsy .toolipsytext {
+
+            visibility: hidden;
+
+            width: 140px;
+
+            background-color: #555;
+
+            color: #fff;
+
+            text-align: center;
+
+            border-radius: 6px;
+
+            padding: 5px;
+
+            position: absolute;
+
+            z-index: 1;
+
+            bottom: 150%;
+
+            left: 50%;
+
+            margin-left: -75px;
+
+            opacity: 0;
+
+            transition: opacity 0.3s;
+
+            }
+
+            
+
+            .toolipsy .toolipsytext::after {
+
+            content: "";
+
+            position: absolute;
+
+            top: 100%;
+
+            left: 50%;
+
+            margin-left: -5px;
+
+            border-width: 5px;
+
+            border-style: solid;
+
+            border-color: #555 transparent transparent transparent;
+
+            }
+
+            
+
+            .toolipsy:hover .toolipsytext {
+
+            visibility: visible;
+
+            opacity: 1;
+
+            }
+
+.toolipsys {
+
+  position: relative;
+
+  display: inline-block;
+
+}
+
+.toolipsys .toolipsystext {
+
+  visibility: hidden;
+
+  width: 140px;
+
+  background-color: #555;
+
+  color: #fff;
+
+  text-align: center;
+
+  border-radius: 6px;
+
+  padding: 5px;
+
+  position: absolute;
+
+  z-index: 1;
+
+  bottom: 150%;
+
+  left: 50%;
+
+  margin-left: -75px;
+
+  opacity: 0;
+
+  transition: opacity 0.3s;
+
+}
+
+.toolipsys .toolipsystext::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 100%;
+
+  left: 50%;
+
+  margin-left: -5px;
+
+  border-width: 5px;
+
+  border-style: solid;
+
+  border-color: #555 transparent transparent transparent;
+
+}
+
+.toolipsys:hover .toolipsystext {
+
+  visibility: visible;
+
+  opacity: 1;
+
+}
+
+.incore {
+
+font-size: 30px;
+
+color: #2F2339;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<span style="color:teal"><p style="font-size:32px">Select voucher to apply in your Purchase</p></span>
+
+<p class="offense" style="tex-align:center"> 10% OFF</p>
+
+<input type="text" value="U8BQ-9KOS-YAC1-8MQH-10%" id="myInput">
+
+<div class="tooltip">
+
+<button onclick="myJepongDevz()" onmouseout="outFunc()">
+
+  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+
+  Copy text
+
+  </button>
+
+</div>
+
+</div>
+
+<br>
+
+</div>
+
+<br>
+
+<p style="text-align:center"> 10% OFF</p>
+
+</div>
+
+<input type="text" value="Y8MT-HYT6-Y8T6-6AG8-10%" id="myInpu">
+
+<div class="toolipsy">
+
+<button onclick="myJepongDev()" onmouseout="myfunc()">
+
+  <span class="toolipsytext" id="myToolips">Copy to clipboard</span>
+
+  Copy text
+
+  </button>
+
+</div>
+
+<br>
+
+</div>
+
+<br>
+
+<p style="text-align:center"> 20% OFF</p>
+
+<input type="text" value="GH8H-7A6Y-8Q1K-M9C5-20%" id="myInputer">
+
+<div class="toolipsys">
+
+<button onclick="myJepongPro()" onmouseout="myFuncter()">
+
+  <span class="toolipsystext" id="myToolsip">Copy to clipboard</span>
+
+  Copy text
+
+  </button>
+
+</div>
+
+</div>
+
+<br>
+
+</div>
+
+<br>
+
+<div class="wrapper">
+
+      <div class="password-box">
+
+        <input type="text" disabled />
+
+        <i class="uil uil-copy copy-icon"></i>
+
+      </div>
+
+      <div class="range-box">
+
+        <input type="range" min="6" max="40" value="8" />
+
+        <span class="slider-number">8</span>
+
+      </div>
+
+      <button class="generate-button">Generate 10% Voucher</button>
+
+    </div>
+
+    <br>
+
+<strong><div class="incore" style="text-align:center">Vouchers ends in</div></strong>
+
+<p style="color:maroon" id="demo"></p>
+
+</div>
+
+</body>
+
+<script>
+
+// Set the date we're counting down to
+
+var countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
+
+// Update the count down every 1 second
+
+var x = setInterval(function() {
+
+  // Get today's date and time
+
+  var now = new Date().getTime();
+
+    
+
+  // Find the distance between now and the count down date
+
+  var distance = countDownDate - now;
+
+    
+
+  // Time calculations for days, hours, minutes and seconds
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    
+
+  // Output the result in an element with id="demo"
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+
+  + minutes + "m " + seconds + "s ";
+
+    
+
+  // If the count down is over, write some text 
+
+  if (distance < 0) {
+
+    clearInterval(x);
+
+    document.getElementById("demo").innerHTML = "Vouchers Expired";
+
+  }
+
+}, 1000);
+
+var i = 0;
+
+var txt = '';
+
+var speed = 150;
+
+function typeWriter() {
+
+  if (i < txt.length) {
+
+    document.getElementById("jepong").innerHTML += txt.charAt(i);
+
+    i++;
+
+    setTimeout(typeWriter, speed);
+
+  }
+
+}
+
+function myJepongDevz() {
+
+  var copyText = document.getElementById("myInput");
+
+  copyText.select();
+
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyText.value);
+
+  
+
+  var tooltip = document.getElementById("myTooltip");
+
+  tooltip.innerHTML = "Voucher Copied: " + copyText.value;
+
+}
+
+function outFunc() {
+
+  var tooltip = document.getElementById("myTooltip");
+
+  tooltip.innerHTML = "Copy to clipboard";
+
+}
+
+function myJepongDev() {
+
+  var copyText = document.getElementById("myInpu");
+
+  copyText.select();
+
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyText.value);
+
+  
+
+  var tooltip = document.getElementById("myToolips");
+
+  tooltip.innerHTML = "Voucher Copied: " + copyText.value;
+
+}
+
+function myfunc() {
+
+  var tooltip = document.getElementById("myToolips");
+
+  tooltip.innerHTML = "Copy to clipboard";
+
+}
+
+        function myJepongPro() {
+
+        var copyText = document.getElementById("myInputer");
+
+        copyText.select();
+
+        copyText.setSelectionRange(0, 99999);
+
+        navigator.clipboard.writeText(copyText.value);
+
+        
+
+        var toolipsys = document.getElementById("myToolsip");
+
+        toolipsys.innerHTML = "Voucher Copied: " + copyText.value;
+
+        }
+
+        
+
+        function myFuncter() {
+
+        var toolipsys = document.getElementById("myToolsip");
+
+        toolipsys.innerHTML = "Copy to clipboard";
+
+        }
+
+        
+
+                      const passwordInput = document.querySelector(".password-box input"),
+
+                      copyIcon = document.querySelector(".password-box .copy-icon"),
+
+                      rangeInput = document.querySelector(".range-box input"),
+
+                      sliderNumber = document.querySelector(".range-box .slider-number"),
+
+                      generateButton = document.querySelector(".generate-button");
+
+                      
+
+                      //Characters of alphabet(a-z/A-Z), numbers(0-9) and Symbols($%&[]...)
+
+                      let allCharacters = "-_@<Q0WE1RTY2UIO3PAS-D4FGH5JKLZ6XC7VBN8M9";
+
+                      
+
+                      //this function will be called on, page reload, generateButton clicked & rangeInput slide
+
+                      const generatePassword = () => {
+
+                      let newPassword = "";
+
+                      
+
+                      //for loop will run till rangeInput value
+
+                      for (let i = 0; i < rangeInput.value; i++) {
+
+                      let randomNumbers = Math.floor(Math.random() * allCharacters.length);
+
+                      newPassword += allCharacters[randomNumbers];
+
+                      }
+
+                      passwordInput.value = newPassword;
+
+                      copyIcon.classList.replace("uil-file-check-alt", "uil-copy"); //replace icon
+
+                      };
+
+                      
+
+                      rangeInput.addEventListener("input", () => {
+
+                      sliderNumber.innerText = rangeInput.value;
+
+                      generatePassword();
+
+                      });
+
+                      
+
+                      //copy passInput's value on copyIcon click
+
+                      //copy passInput's value on copyIcon click
+
+                      copyIcon.addEventListener("click", () => {
+
+                      navigator.clipboard.writeText(passwordInput.value);
+
+                      copyIcon.classList.replace("uil-copy", "uil-file-check-alt"); //replace icon
+
+                      });
+
+                      
+
+                      generatePassword();
+
+                      generateButton.addEventListener("click", generatePassword);
+
+</script>
+
+</body>
+
+</html>
